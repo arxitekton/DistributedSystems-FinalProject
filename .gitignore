@@ -1,0 +1,27 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+# Properties
+#src/main/resources/application.properties
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij IDEA
+.idea
+.idea/
+
+# Maven
+log/
+target/
+/bin/
+
+
+distrSys-backend.iml
+
+# upload folder
+upload-default/
+upload-photo/
+upload-audio/
+upload-dir/
