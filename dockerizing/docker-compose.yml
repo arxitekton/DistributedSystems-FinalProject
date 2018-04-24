@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+  app:
+    build: ./app/
+    links:
+      - mysqldb
+      - mongodb
+    ports:
+      - "8080:8080"
+
+  mysqldb:
+    image: mysql:5.7
+    container_name: "mysqldb"
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=distr_sys
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+
+
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    ports:
+      - "27017:27017"
