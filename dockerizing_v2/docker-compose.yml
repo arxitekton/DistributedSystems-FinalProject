@@ -1,0 +1,74 @@
+version: '2'
+services:
+
+  app:
+    build: ./app/
+    links:
+      - mysqldb
+      - mongodb
+    ports:
+      - "8080:8080"
+
+  mysqldb:
+    image: mysql:5.7
+    container_name: "mysqldb"
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=distr_sys
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+
+  ## Config Servers
+  config01:
+    container_name: config01
+    image: mongo
+    command: mongod --port 27017 --configsvr --replSet configserver --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/config1:/data/db
+  config02:
+    container_name: config02
+    image: mongo
+    command: mongod --port 27017 --configsvr --replSet configserver --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/config2:/data/db
+  ## Shards
+  shard01a:
+    container_name: shard01a
+    image: mongo
+    command: mongod --port 27018 --shardsvr --replSet shard01 --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/data1:/data/db
+  shard01b:
+    container_name: shard01b
+    image: mongo
+    command: mongod --port 27018 --shardsvr --replSet shard01 --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/data2:/data/db
+  shard02a:
+    container_name: shard02a
+    image: mongo
+    command: mongod --port 27019 --shardsvr --replSet shard02 --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/data3:/data/db
+  shard02b:
+    container_name: shard02b
+    image: mongo
+    command: mongod --port 27019 --shardsvr --replSet shard02 --noprealloc --smallfiles --oplogSize 16
+    volumes:
+      - /mongo_cluster/data4:/data/db
+  ## Router
+  mongodb:
+    container_name: "mongodb"
+    image: mongo
+    command: mongos --port 27017 --configdb configserver/config01:27017,config02:27017
+    ports:
+      - "27017:27017"
+    depends_on:
+      - config01
+      - config02
+      - shard01a
+      - shard01b
+      - shard02a
+      - shard02b
