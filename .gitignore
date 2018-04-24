@@ -1,7 +1,7 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
 
 # Properties
-src/main/resources/application.properties
+#src/main/resources/application.properties
 
 # Eclipse
 .classpath
