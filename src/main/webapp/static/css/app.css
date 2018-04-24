@@ -1,0 +1,162 @@
+
+/* Vehicles */
+		.ui-dialog{
+
+			padding-top: 88px !important;
+			height:100%  !important;
+			overflow: scroll !important;
+		}
+
+		a {
+			color: #2A679F;
+		}
+
+		.scroll-content {
+			overflow-y: auto;
+			width:100%;
+		 }
+
+		div.jtable-main-container {
+		  height:100%;
+/*      overflow-x: scroll;*/
+		}
+
+		.jtable-main-container .scroll-content {
+			height: 660px;
+		}
+
+		#VehicleTableContainer {
+			margin-top: 20px;
+			height: 700px;
+		}
+/*		
+		*, *:before, *:after {
+			webkit-box-sizing: initial !important;
+			box-sizing: initial !important;
+		}
+*/
+		/*========*/
+
+		.form-wrapper {
+			background-color: #f8f8f8;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8));
+			background-image: -webkit-linear-gradient(top, #ffffff, #f8f8f8);
+			background-image: -moz-linear-gradient(top, #ffffff, #f8f8f8);
+			background-image: -ms-linear-gradient(top, #ffffff, #f8f8f8);
+			background-image: -o-linear-gradient(top, #ffffff, #f8f8f8);
+			background-image: linear-gradient(top, #ffffff, #f8f8f8);
+			border-color: #e7e7e7;
+			border-style: solid;
+			border-width: 1px;
+
+			overflow: hidden;
+			padding: 6px;
+			width: 450px;
+		}
+
+		.form-wrapper #search {
+			border: 1px solid #CCC;
+			-webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+			-moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+			box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		  color: #999;
+			float: left;
+			font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+			height: 32px;
+			padding: 10px;
+			width: 320px;
+		}
+
+		.form-wrapper #search:focus {
+			border-color: #aaa;
+			outline: 0;
+		}
+
+		.form-wrapper #search:-moz-placeholder,
+		.form-wrapper #search:-ms-input-placeholder,
+		.form-wrapper #search::-webkit-input-placeholder {
+			color: #999;
+			font-weight: normal;
+		}
+
+		.form-wrapper #submit {
+			background-color: #1c78de;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#2d89ef), to(#1c78de));
+			background-image: -webkit-linear-gradient(top, #2d89ef, #1c78de);
+			background-image: -moz-linear-gradient(top, #2d89ef, #1c78de);
+			background-image: -ms-linear-gradient(top, #2d89ef, #1c78de);
+			background-image: -o-linear-gradient(top, #2d89ef, #1c78de);
+			background-image: linear-gradient(top, #2d89ef, #1c78de);
+			border: 1px solid #00748f;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+			-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+			color: #fafafa;
+			cursor: pointer;
+			height: 32px;
+			float: right;
+			font: 15px Arial, Helvetica;
+			padding: 0;
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+			width: 100px;
+		}
+
+		.form-wrapper #submit:hover,
+		.form-wrapper #submit:focus {
+			background-color: #2d89ef;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#1c78de), to(#2d89ef));
+			background-image: -webkit-linear-gradient(top, #1c78de, #2d89ef);
+			background-image: -moz-linear-gradient(top, #1c78de, #2d89ef);
+			background-image: -ms-linear-gradient(top, #1c78de, #2d89ef);
+			background-image: -o-linear-gradient(top, #1c78de, #2d89ef);
+			background-image: linear-gradient(top, #1c78de, #2d89ef);
+		}
+
+		.form-wrapper #submit:active {
+			-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+			-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+			outline: 0;
+		}
+
+		.form-wrapper #submit::-moz-focus-inner {
+			border: 0;
+		}
+
+        .btnIcon {
+            padding-right: 2px;
+        }
+
+        .imgContainer {
+            width: 80px;
+            height:80px;
+            vertical-align: bottom;
+            display: table-cell;
+        }
+        .imgContainer img {
+            max-width: 80px;
+            max-height:80px;
+            vertical-align: bottom;
+        }
+        
+        .justified-gallery {
+			height: 75px !important;
+			overflow-y: scroll  !important;
+			padding-right: 15px;
+        }
+        .nonDisplay {
+			display: none;
+		}
+		
+		.icon-remove-sign {
+		color: red !important;
+		}
+		
+

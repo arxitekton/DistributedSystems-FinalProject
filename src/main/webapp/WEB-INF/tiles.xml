@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/jsp/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/tiles/template/defaultHeader.jsp" />
+			
+		<!-- <put-attribute name="menu"
+			value="/WEB-INF/jsp/tiles/template/defaultMenu.jsp" /> -->
+			
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="index" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+	</definition>
+
+	<!-- User Page -->
+	<definition name="login" extends="base-definition">
+		<put-attribute name="title" value="login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user/login.jsp" />
+	</definition>
+
+	<definition name="user/registrationForm" extends="base-definition">
+		<put-attribute name="title" value="registration" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/user/registrationForm.jsp" />
+	</definition>
+
+	<definition name="user/creationForm" extends="base-definition">
+		<put-attribute name="title" value="creation" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/user/creationForm.jsp" />
+	</definition>
+
+	<!-- Users -->
+	<definition name="user" extends="base-definition">
+		<put-attribute name="title" value="user" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user/user.jsp" />
+	</definition>
+	
+</tiles-definitions>
