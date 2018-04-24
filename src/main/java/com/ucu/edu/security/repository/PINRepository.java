@@ -19,7 +19,7 @@ import com.ucu.edu.user.model.PIN;
 public interface PINRepository extends JpaRepository<PIN, Long> {
 	
 	@Override
-	@PostAuthorize("hasRole('ROLE_ADMIN') or (returnObject!=null and returnObject.user!=null and returnObject.user.id == @securityUtil.getLogInUserId())")
+	//@PostAuthorize("hasRole('ROLE_ADMIN') or (returnObject!=null and returnObject.user!=null and returnObject.user.id == @securityUtil.getLogInUserId())")
 	PIN findOne(Long arg0);
 
 	@Override
@@ -35,7 +35,7 @@ public interface PINRepository extends JpaRepository<PIN, Long> {
 	void delete(@Param("arg0") PIN arg0);
 	
 	@Override
-	@PreAuthorize("hasRole('ROLE_ADMIN') or (#arg0 != null and #arg0.user != null and #arg0.user.id == @securityUtil.getLogInUserId()) ")
+	//@PreAuthorize("hasRole('ROLE_ADMIN') or (#arg0 != null and #arg0.user != null and #arg0.user.id == @securityUtil.getLogInUserId()) ")
 	<S extends PIN> S save(@Param("arg0") S arg0);
 
 	@Override
